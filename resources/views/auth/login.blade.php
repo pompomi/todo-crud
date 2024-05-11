@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="row">
+        <h1 class="mb-4">Login</h1>
         <form class="col-md-6" action="{{ route('login.login') }}" method="POST">
             @if (session('register-success'))
                 <div class="alert alert-success" role="alert">
@@ -17,7 +18,7 @@
             @endif
             @csrf
             <div class="mb-3">
-                <label for="emial" class="form-label">Email</label>
+                <label for="email" class="form-label">Email</label>
                 <input name="email" type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">

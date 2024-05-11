@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="row">
+        <h1 class="mb-4">Register</h1>
         <form class="col-md-6" action="{{ route('register.store') }}" method="POST">
             @csrf
             <div class="mb-3">

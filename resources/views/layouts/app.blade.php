@@ -21,7 +21,15 @@
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="{{ route('home') }}">Todo App</a>
             @auth
-            <a class="link-underline link-underline-opacity-0" href="{{ route('login.logout') }}">Logout</a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Hello, {{ Auth::user()->name }}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('login.logout') }}">Logout</a></li>
+                    </ul>
+                </div>
             @endauth
         </div>
     </nav>
